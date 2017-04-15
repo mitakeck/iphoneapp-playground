@@ -1,0 +1,6 @@
+framework module Pods_TinyCOnstraintsSample {
+  umbrella header "Pods-TinyCOnstraintsSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
