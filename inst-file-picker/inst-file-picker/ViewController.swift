@@ -49,7 +49,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         collectionView.collectionViewLayout = flowLayout
         
-        previewView.frame.size.height = self.view.frame.size.width * 9.0 / 16.0
+//        previewView.frame.size.height = self.view.frame.size.width * 9.0 / 16.0
         
         moviePlayer = AVPlayerViewController()
         moviePlayer.view.frame = CGRect(x: 0, y: 0, width: previewView.frame.size.width, height: previewView.frame.size.height)
@@ -111,10 +111,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
   
     @IBAction func cancel(_ sender: Any) {
+        self.moviePlayer.player?.pause()
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func done(_ sender: Any) {
+        self.moviePlayer.player?.pause()
         self.dismiss(animated: true, completion: nil)
     }
     
