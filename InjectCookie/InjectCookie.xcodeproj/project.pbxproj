@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E96D30161EA975C9005D550E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D30151EA975C9005D550E /* AppDelegate.swift */; };
-		E96D30181EA975C9005D550E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D30171EA975C9005D550E /* ViewController.swift */; };
 		E96D301B1EA975C9005D550E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96D30191EA975C9005D550E /* Main.storyboard */; };
 		E96D301D1EA975C9005D550E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E96D301C1EA975C9005D550E /* Assets.xcassets */; };
 		E96D30201EA975C9005D550E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96D301E1EA975C9005D550E /* LaunchScreen.storyboard */; };
+		E96D30281EA9767D005D550E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96D30271EA9767D005D550E /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E96D30121EA975C9005D550E /* InjectCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InjectCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96D30151EA975C9005D550E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E96D30171EA975C9005D550E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E96D301A1EA975C9005D550E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E96D301C1EA975C9005D550E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E96D301F1EA975C9005D550E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E96D30211EA975C9005D550E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96D30271EA9767D005D550E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 		E96D30141EA975C9005D550E /* InjectCookie */ = {
 			isa = PBXGroup;
 			children = (
+				E96D30271EA9767D005D550E /* WebViewController.swift */,
 				E96D30151EA975C9005D550E /* AppDelegate.swift */,
-				E96D30171EA975C9005D550E /* ViewController.swift */,
 				E96D30191EA975C9005D550E /* Main.storyboard */,
 				E96D301C1EA975C9005D550E /* Assets.xcassets */,
 				E96D301E1EA975C9005D550E /* LaunchScreen.storyboard */,
@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					E96D30111EA975C9005D550E = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 86392YLM9A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E96D30181EA975C9005D550E /* ViewController.swift in Sources */,
 				E96D30161EA975C9005D550E /* AppDelegate.swift in Sources */,
+				E96D30281EA9767D005D550E /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86392YLM9A;
 				INFOPLIST_FILE = InjectCookie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitake.org.InjectCookie;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86392YLM9A;
 				INFOPLIST_FILE = InjectCookie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mitake.org.InjectCookie;
