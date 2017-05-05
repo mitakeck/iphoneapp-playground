@@ -39,14 +39,17 @@ class MovieCollectionViewCell: UICollectionViewCell {
         })
     }
     
-    func select() {
+    func select() -> Bool {
         if !self.isSelect {
             self.isSelected = true
             self.isSelect = self.isSelected
             self.selectedView.isHidden = !self.isSelected
         } else {
             self.deselect()
+            self.isSelect = false
+            self.isSelected = self.isSelect
         }
+        return self.isSelect
     }
     
     func deselect() {

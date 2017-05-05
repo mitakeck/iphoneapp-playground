@@ -33,7 +33,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         collectionView.frame.origin.y = topToolBar.frame.height + previewView.frame.height
         collectionView.frame.size.height = self.view.frame.height - collectionView.frame.origin.y
-        print(collectionView.frame)
     }
     
     fileprivate func setup() {
@@ -81,9 +80,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? MovieCollectionViewCell {
-            cell.select()
+            let select = cell.select()
             if let asset = cell.assets {
-               setPreview(asset: asset)
+                if select {
+                    setPreview(asset: asset)
+                }
             }
         }
     }
