@@ -95,15 +95,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func setPreview(asset: PHAsset) {
-        let options: PHVideoRequestOptions = PHVideoRequestOptions()
-        options.version = .original
-        PHImageManager.default().requestAVAsset(forVideo: asset, options: options, resultHandler: {(asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable : Any]?) -> Void in
-            if let urlAsset = asset as? AVURLAsset {
-                let localVideoUrl: URL = urlAsset.url
-                self.moviePlayer.player = AVPlayer(url: localVideoUrl)
-                self.moviePlayer.player?.play()
-            }
-        })
+        DispatchQueue.global(qos: .userInteractive).async {
+            let options: PHVideoRequestOptions = PHVideoRequestOptions()
+            options.version = .original
+            PHImageManager.default().requestAVAsset(forVideo: asset, options: options, resultHandler: {(asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable : Any]?) -> Void in
+                if let urlAsset = asset as? AVURLAsset {
+                    let localVideoUrl: URL = urlAsset.url
+                    DispatchQueue.main.sync {
+                        self.moviePlayer.player = AVPlayer(url: localVideoUrl)
+                        self.moviePlayer.player?.play()
+                    }
+                }
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
