@@ -80,11 +80,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? MovieCollectionViewCell {
-            let select = cell.select()
             if let asset = cell.assets {
-                if select {
-                    setPreview(asset: asset)
-                }
+                cell.select()
+                setPreview(asset: asset)
             }
         }
     }

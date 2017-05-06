@@ -13,7 +13,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var selectedView: UIView!
     @IBOutlet weak var thumImageView: UIImageView!
     var assets: PHAsset? = nil
-    var isSelect: Bool = false
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,22 +38,11 @@ class MovieCollectionViewCell: UICollectionViewCell {
         })
     }
     
-    func select() -> Bool {
-        if !self.isSelect {
-            self.isSelected = true
-            self.isSelect = self.isSelected
-            self.selectedView.isHidden = !self.isSelected
-        } else {
-            self.deselect()
-            self.isSelect = false
-            self.isSelected = self.isSelect
-        }
-        return self.isSelect
+    func select() {
+        self.selectedView.isHidden = !self.isSelected
     }
     
     func deselect() {
-        self.isSelected = false
-        self.isSelect = self.isSelected
         self.selectedView.isHidden = !self.isSelected
     }
 }
